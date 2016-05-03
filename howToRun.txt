@@ -1,0 +1,43 @@
+Template:
+/path/to/spark/bin/spark-submit --class <class name with package structure> /path/to/jar <app name> <data dir> \
+<mal file> <ben file> <use aws flag> <optional master public dns>
+
+Examples:
+
+On local machine:
+/Applications/spark-1.6.0-bin-hadoop2.6/bin/spark-submit --class MBartlingSparkML.SVMDriver \
+/Users/joojayhuyn/IdeaProjects/DL4S-SparkV2/target/scala-2.10/dl4s-sparkv2_2.10-1.0.jar \
+SparkSVMDriver /Volumes/MACPASSPORT/joojay/MalwareData/ Mal.csv Ben.csv false
+
+/Applications/spark-1.6.0-bin-hadoop2.6/bin/spark-submit --class MBartlingSparkML.LogRegDriver \
+/Users/joojayhuyn/IdeaProjects/DL4S-SparkV2/target/scala-2.10/dl4s-sparkv2_2.10-1.0.jar \
+SparkLogRegDriver /Volumes/MACPASSPORT/joojay/MalwareData/ Mal.csv Ben.csv false
+
+On AWS Spark EC2 Cluster with HDFS:
+/root/spark/bin/spark-submit --class MBartlingSparkML.SVMDriver /home/ec2-user/dl4s-sparkv2_2.10-1.0.jar \
+SparkSVMDriver /user/joojayhuyn/ Mal.csv Ben.csv true ec2-52-39-81-93.us-west-2.compute.amazonaws.com
+
+/root/spark/bin/spark-submit --class MBartlingSparkML.LogRegDriver /home/ec2-user/dl4s-sparkv2_2.10-1.0.jar \
+SparkLogRegDriver /user/joojayhuyn/ Mal.csv Ben.csv true ec2-52-39-81-93.us-west-2.compute.amazonaws.com
+
+/root/spark/bin/spark-submit --class MBartlingSparkML.MLPDriver /home/ec2-user/dl4s-sparkv2_2.10-1.0.jar \
+SparkMLPDriver /user/joojayhuyn/ Mal.csv Ben.csv true ec2-52-39-81-93.us-west-2.compute.amazonaws.com
+
+/root/spark/bin/spark-submit \
+--class MBartlingDL4J.MLPDriver \
+--jars /home/ec2-user/dl4j_jars/deeplearning4j-core-0.4-rc3.8.jar,\
+/home/ec2-user/dl4j_jars/deeplearning4j-scaleout-api-1.0.jar,\
+/home/ec2-user/dl4j_jars/nd4j-x86-0.4-rc3.8.jar,\
+/home/ec2-user/dl4j_jars/canova-api-0.0.0.14.jar,\
+/home/ec2-user/dl4j_jars/nd4j-jblas-0.4-rc3.6.jar,\
+/home/ec2-user/dl4j_jars/dl4j-spark-0.4-rc3.8.jar,\
+/home/ec2-user/dl4j_jars/spring-core-4.2.5.RELEASE.jar,\
+/home/ec2-user/dl4j_jars/native_system-java-1.1.jar,\
+/home/ec2-user/dl4j_jars/reflections-0.9.10.jar,\
+/home/ec2-user/dl4j_jars/guava-19.0.jar,\
+/home/ec2-user/dl4j_jars/javassist-3.12.1.GA.jar,\
+/home/ec2-user/dl4j_jars/jblas-1.2.4.jar,\
+/home/ec2-user/dl4j_jars/jackson-dataformat-yaml-2.7.3.jar,\
+/home/ec2-user/dl4j_jars/nd4j-api-0.4-rc3.8.jar \
+/home/ec2-user/dl4s-sparkv2_2.10-1.0.jar DL4JMLPDriver /user/joojayhuyn/ Mal.csv Ben.csv true \
+ec2-52-39-81-93.us-west-2.compute.amazonaws.com
