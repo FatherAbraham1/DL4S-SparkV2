@@ -126,7 +126,7 @@ object MLPDriver {
         avgAreaUnderROC += metrics.areaUnderROC()
       }
 
-      avgAreaUnderROC /= 10 // Dividing avg area under roc by 10 to get the correct avg
+      avgAreaUnderROC /= splits.length // Dividing avg area under roc by 10 to get the correct avg
       println("Training average areaUnderROC: " + avgAreaUnderROC)
 
       // Updating best avg area under roc and best architecture seen so far
