@@ -1,0 +1,63 @@
+16/05/04 21:32:51 WARN SparkConf: 
+SPARK_WORKER_INSTANCES was detected (set to '1').
+This is deprecated in Spark 1.0+.
+
+Please instead use:
+ - ./spark-submit with --num-executors to specify the number of executors
+ - Or set SPARK_EXECUTOR_INSTANCES
+ - spark.executor.instances to configure the number of instances in the spark config.
+        
+16/05/04 21:32:54 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/05/04 21:32:54 WARN LoadSnappy: Snappy native library not loaded
+Size of entire training dataset: 149951                                         
+Iteration: 0 Size of training dataset: 134974 Size of cv dataset: 14977 MLP Architecture: 332,150,2
+[Stage 8:====================================================>    (33 + 3) / 36]16/05/04 21:33:10 WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
+16/05/04 21:33:10 WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
+Iteration: 1 Size of training dataset: 134923 Size of cv dataset: 15028 MLP Architecture: 332,150,2
+Iteration: 2 Size of training dataset: 135197 Size of cv dataset: 14754 MLP Architecture: 332,150,2
+Iteration: 3 Size of training dataset: 135065 Size of cv dataset: 14886 MLP Architecture: 332,150,2
+Iteration: 4 Size of training dataset: 134886 Size of cv dataset: 15065 MLP Architecture: 332,150,2
+Iteration: 5 Size of training dataset: 134917 Size of cv dataset: 15034 MLP Architecture: 332,150,2
+16/05/04 21:46:13 ERROR StrongWolfeLineSearch: Encountered bad values in function evaluation. Decreasing step size to 0.5
+16/05/04 21:46:18 ERROR StrongWolfeLineSearch: Encountered bad values in function evaluation. Decreasing step size to 0.5
+16/05/04 21:46:23 ERROR StrongWolfeLineSearch: Encountered bad values in function evaluation. Decreasing step size to 0.5
+16/05/04 21:46:27 ERROR StrongWolfeLineSearch: Encountered bad values in function evaluation. Decreasing step size to 0.5
+16/05/04 21:46:30 ERROR StrongWolfeLineSearch: Encountered bad values in function evaluation. Decreasing step size to 0.5
+16/05/04 21:46:32 ERROR StrongWolfeLineSearch: Encountered bad values in function evaluation. Decreasing step size to 0.25
+16/05/04 21:46:35 ERROR StrongWolfeLineSearch: Encountered bad values in function evaluation. Decreasing step size to 0.5
+16/05/04 21:46:36 ERROR StrongWolfeLineSearch: Encountered bad values in function evaluation. Decreasing step size to 0.25
+16/05/04 21:46:38 ERROR StrongWolfeLineSearch: Encountered bad values in function evaluation. Decreasing step size to 0.125
+16/05/04 21:46:39 ERROR StrongWolfeLineSearch: Encountered bad values in function evaluation. Decreasing step size to 0.0625
+16/05/04 21:46:43 ERROR StrongWolfeLineSearch: Encountered bad values in function evaluation. Decreasing step size to 0.046875
+16/05/04 21:47:03 ERROR LBFGS: Failure! Resetting history: breeze.optimize.FirstOrderException: Line search zoom failed
+Iteration: 6 Size of training dataset: 134876 Size of cv dataset: 15075 MLP Architecture: 332,150,2
+Iteration: 7 Size of training dataset: 134869 Size of cv dataset: 15082 MLP Architecture: 332,150,2
+Iteration: 8 Size of training dataset: 134741 Size of cv dataset: 15210 MLP Architecture: 332,150,2
+Iteration: 9 Size of training dataset: 135111 Size of cv dataset: 14840 MLP Architecture: 332,150,2
+Training average areaUnderROC: 0.9120749194316493                               
+Iteration: 0 Size of training dataset: 134974 Size of cv dataset: 14977 MLP Architecture: 332,200,100,2
+Iteration: 1 Size of training dataset: 134923 Size of cv dataset: 15028 MLP Architecture: 332,200,100,2
+Iteration: 2 Size of training dataset: 135197 Size of cv dataset: 14754 MLP Architecture: 332,200,100,2
+Iteration: 3 Size of training dataset: 135065 Size of cv dataset: 14886 MLP Architecture: 332,200,100,2
+Iteration: 4 Size of training dataset: 134886 Size of cv dataset: 15065 MLP Architecture: 332,200,100,2
+Iteration: 5 Size of training dataset: 134917 Size of cv dataset: 15034 MLP Architecture: 332,200,100,2
+Iteration: 6 Size of training dataset: 134876 Size of cv dataset: 15075 MLP Architecture: 332,200,100,2
+Iteration: 7 Size of training dataset: 134869 Size of cv dataset: 15082 MLP Architecture: 332,200,100,2
+Iteration: 8 Size of training dataset: 134741 Size of cv dataset: 15210 MLP Architecture: 332,200,100,2
+Iteration: 9 Size of training dataset: 135111 Size of cv dataset: 14840 MLP Architecture: 332,200,100,2
+Training average areaUnderROC: 0.9110349009237535                               
+Iteration: 0 Size of training dataset: 134974 Size of cv dataset: 14977 MLP Architecture: 332,150,150,2
+Iteration: 1 Size of training dataset: 134923 Size of cv dataset: 15028 MLP Architecture: 332,150,150,2
+Iteration: 2 Size of training dataset: 135197 Size of cv dataset: 14754 MLP Architecture: 332,150,150,2
+Iteration: 3 Size of training dataset: 135065 Size of cv dataset: 14886 MLP Architecture: 332,150,150,2
+Iteration: 4 Size of training dataset: 134886 Size of cv dataset: 15065 MLP Architecture: 332,150,150,2
+Iteration: 5 Size of training dataset: 134917 Size of cv dataset: 15034 MLP Architecture: 332,150,150,2
+Iteration: 6 Size of training dataset: 134876 Size of cv dataset: 15075 MLP Architecture: 332,150,150,2
+Iteration: 7 Size of training dataset: 134869 Size of cv dataset: 15082 MLP Architecture: 332,150,150,2
+Iteration: 8 Size of training dataset: 134741 Size of cv dataset: 15210 MLP Architecture: 332,150,150,2
+Iteration: 9 Size of training dataset: 135111 Size of cv dataset: 14840 MLP Architecture: 332,150,150,2
+Training average areaUnderROC: 0.9117798020852085                               
+Selected MLP's architecture: 332,150,2
+Size of entire testing dataset: 37589                                           
+Final testing areaUnderROC: 0.9148585889298027                                  
+Final testing accuracy rate: 0.9159594562238953
