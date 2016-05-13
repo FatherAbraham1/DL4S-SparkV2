@@ -15,13 +15,13 @@ SparkLogRegDriver /Volumes/MACPASSPORT/joojay/MalwareData/ Mal.csv Ben.csv false
 
 On AWS Spark EC2 Cluster with HDFS:
 /root/spark/bin/spark-submit --class MBartlingSparkML.SVMDriver /home/ec2-user/dl4s-sparkv2_2.10-1.0.jar \
-AWSSparkSVMDriver /user/joojayhuyn/ Mal.csv Ben.csv true ec2-52-39-81-93.us-west-2.compute.amazonaws.com
+AWSSparkSVMDriver /user/joojayhuyn/ Mal.csv Ben.csv true ec2-52-37-166-25.us-west-2.compute.amazonaws.com
 
 /root/spark/bin/spark-submit --class MBartlingSparkML.LogRegDriver /home/ec2-user/dl4s-sparkv2_2.10-1.0.jar \
-AWSSparkLogRegDriver /user/joojayhuyn/ Mal.csv Ben.csv true ec2-52-39-81-93.us-west-2.compute.amazonaws.com
+AWSSparkLogRegDriver /user/joojayhuyn/ Mal.csv Ben.csv true ec2-52-37-166-25.us-west-2.compute.amazonaws.com
 
 /root/spark/bin/spark-submit --class MBartlingSparkML.MLPDriver /home/ec2-user/dl4s-sparkv2_2.10-1.0.jar \
-AWSSparkMLPDriver /user/joojayhuyn/ Mal.csv Ben.csv true ec2-52-39-81-93.us-west-2.compute.amazonaws.com
+AWSSparkMLPDriver /user/joojayhuyn/ Mal.csv Ben.csv true ec2-52-37-166-25.us-west-2.compute.amazonaws.com
 
 /root/spark/bin/spark-submit \
 --class MBartlingDL4J.MLPDriver \
@@ -40,4 +40,4 @@ AWSSparkMLPDriver /user/joojayhuyn/ Mal.csv Ben.csv true ec2-52-39-81-93.us-west
 /home/ec2-user/dl4j_jars/jackson-dataformat-yaml-2.7.3.jar,\
 /home/ec2-user/dl4j_jars/nd4j-api-0.4-rc3.8.jar \
 /home/ec2-user/dl4s-sparkv2_2.10-1.0.jar AWSDL4JMLPDriver /user/joojayhuyn/ Mal.csv Ben.csv true \
-ec2-52-39-81-93.us-west-2.compute.amazonaws.com
+ec2-52-37-166-25.us-west-2.compute.amazonaws.com

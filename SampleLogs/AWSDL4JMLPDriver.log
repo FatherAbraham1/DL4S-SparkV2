@@ -1,0 +1,28 @@
+16/05/12 23:29:14 WARN SparkConf: 
+SPARK_WORKER_INSTANCES was detected (set to '1').
+This is deprecated in Spark 1.0+.
+
+Please instead use:
+ - ./spark-submit with --num-executors to specify the number of executors
+ - Or set SPARK_EXECUTOR_INSTANCES
+ - spark.executor.instances to configure the number of instances in the spark config.
+        
+16/05/12 23:29:16 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/05/12 23:29:16 WARN LoadSnappy: Snappy native library not loaded
+Size of entire training dataset: 149951                                         
+16/05/12 23:29:25 WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
+16/05/12 23:29:25 WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
+****************************************************************
+WARNING: COULD NOT LOAD NATIVE SYSTEM BLAS
+ND4J performance WILL be reduced
+Please install native BLAS library such as OpenBLAS or IntelMKL
+See http://nd4j.org/getstarted.html#open for further details
+****************************************************************
+16/05/12 23:29:26 WARN BaseOptimizer: Objective function automatically set to minimize. Set stepFunction in neural net configuration to change default settings.
+16/05/12 23:29:39 WARN TaskSetManager: Stage 3 contains a task of very large size (28730 KB). The maximum recommended task size is 100 KB.
+16/05/12 23:52:20 WARN TaskSetManager: Stage 4 contains a task of very large size (28730 KB). The maximum recommended task size is 100 KB.
+16/05/12 23:52:26 WARN TaskSetManager: Stage 5 contains a task of very large size (28730 KB). The maximum recommended task size is 100 KB.
+16/05/12 23:52:27 WARN TaskSetManager: Stage 6 contains a task of very large size (28730 KB). The maximum recommended task size is 100 KB.
+Size of entire testing dataset: 37589                                           
+Final testing areaUnderROC: 0.5                                                 
+Final testing accuracy rate: 0.6544999866982362

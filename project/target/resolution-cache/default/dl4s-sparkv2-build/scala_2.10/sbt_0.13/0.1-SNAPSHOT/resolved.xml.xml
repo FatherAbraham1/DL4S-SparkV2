@@ -4,7 +4,7 @@
 		module="dl4s-sparkv2-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20160418141319"
+		publication="20160506105120"
 		e:sbtVersion="0.13" e:scalaVersion="2.10"
 	>
 		<description>
