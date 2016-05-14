@@ -5,7 +5,9 @@ import ArgsConfigUtils.ArgsConfig
 import ETLUtils.ETL
 import org.apache.spark.ml.classification.MultilayerPerceptronClassifier
 import org.apache.spark.mllib.evaluation.BinaryClassificationMetrics
-import org.apache.spark.sql.SQLContext
+import org.apache.spark.mllib.linalg.VectorUDT
+import org.apache.spark.sql.types.{DoubleType, StructField, StructType}
+import org.apache.spark.sql.{DataFrame, Row, SQLContext}
 import org.apache.spark.{SparkConf, SparkContext}
 
 /**
@@ -49,14 +51,90 @@ object MLPDriver {
 
     // Converting csv data files (one file for each class, malicious and benign) to a Spark DataFrame. Once again,
     // this function is a hack because it assumes there are only 2 classes of interest.
-    //val (malDataFrame, benDataFrame) = ETL.mBartCSVToMLDataframe(sc, sqlContext, malDataFileName, benDataFileName)
     val df = ETL.mBartCSVToMLDataFrame(sc, sqlContext, malDataFileName, benDataFileName)
+
+    /*
+     * YOU CAN UNCOMMENT THIS CODE. IT WORKS!
+     *
+     * This section creates a learning curve for an MLP model with a 332-150-2 architecture. The x axis in the curve is
+     * the number of training examples used to train the model. The y axis represents the model's misclassification
+     * error rate on the current training and cross-validation set. This code could probably be written better and
+     * deserves some refactoring.
+     */
+    /*
+    // Getting training, cross-validation, and test dataset from Spark DataFrame of interest
+    val (trainingData, cvData, testData) = ETL.getTrainCVTestSetsFromDataFrame(df)
+
+    // Caching the trainingData DataFrame will accelerate model training
+    trainingData.cache()
+
+    println("Size of entire training dataset: " + trainingData.count())
+    println("Size of entire cross-validation set: " + cvData.count())
+
+    // Splitting training dataset into 10 pieces to plot 10 points on a learning curve
+    val splits = trainingData.randomSplit(
+      Array(0.001953125, 0.001953125, 0.00390625, 0.0078125, 0.015625, 0.03125, 0.0625, 0.125, 0.25, 0.5), seed = 1234L)
+
+    // Arbitrarily MLP architecture chosen for initial model diagnosis in learning curve plot
+    val layers = Array[Int](332, 150, 2)
+    println("MLP Architecture: " + layers.mkString(","))
+
+    // Initializing training set to be used in learning curve plot to 0
+    val schema = StructType( // Declaring schema of DataFrame to be created
+      StructField("label", DoubleType, true) ::
+        StructField("features", new VectorUDT, true) :: Nil
+    )
+    // Initializing DataFrame with an empty RDD and schema of 2 columns (label and features)
+    var trainSet = sqlContext.createDataFrame(sc.emptyRDD[Row], schema)
+
+    // Cross-validation set to be used in learning plot
+    val cvSet = cvData
+
+    println("[Iteration] [Training Set Size] [Train Error Rate] [Cross-validation Error Rate]")
+    // Generating points for learning curve plot
+    for (i <- 0 until splits.length) {
+
+      // Incrementing size of training set during each iteration
+      trainSet = trainSet.unionAll(splits(i))
+
+      // Configuring multilayer perceptron with selected architecture and other default parameter values
+      val trainingMLP = new MultilayerPerceptronClassifier()
+        .setLayers(layers)
+        .setBlockSize(128)
+        .setSeed(1234L)
+        .setMaxIter(100)
+
+      // Training mlp model
+      val trainingMLPModel = trainingMLP.fit(trainSet)
+
+      // Evaluating performance of mlp model on current training and cross-validation set
+      val trainResult = trainingMLPModel.transform(trainSet)
+      val cvResult = trainingMLPModel.transform(cvSet)
+
+      // Registering DataFrames as SQL tables to perform SQL queries on DataFrames
+      val trainingTableName = "trainingTable" + i
+      val cvTableName = "cvTable" + i
+      trainResult.registerTempTable(trainingTableName)
+      cvResult.registerTempTable(cvTableName)
+
+      // Obtaining accuracy rate of MLP model on training set
+      val numTrainMisPredicted = sqlContext.sql("SELECT COUNT(*) FROM " + trainingTableName + " WHERE prediction <> label")
+        .first()(0).asInstanceOf[Long].toDouble
+      val trainErr = numTrainMisPredicted / trainSet.count()
+
+      // Obtaining accuracy rate of MLP model on cross-validation set
+      val numCVMisPredicted = sqlContext.sql("SELECT COUNT(*) FROM " + cvTableName + " WHERE prediction <> label")
+        .first()(0).asInstanceOf[Long].toDouble
+      val cvErr = numCVMisPredicted / cvSet.count()
+
+      println(i + " " + trainSet.count() + " " + trainErr + " " + cvErr)
+    }*/
 
     // Getting training and test dataset from Spark DataFrame of interest
     val (trainingData, testData) = ETL.getTrainTestSetsFromDataFrame(df)
 
     // Caching the trainingData DataFrame will accelerate model training
-    trainingData.cache()
+    trainingData.cache() // comment out this line when running on your local machine
 
     println("Size of entire training dataset: " + trainingData.count())
 
@@ -135,8 +213,7 @@ object MLPDriver {
         bestLayers = layers
       }
     }
-
-    //bestLayers = Array[Int](332, 150, 2)
+    
     println("Selected MLP's architecture: " + bestLayers.mkString(","))
 
     // Configuring multilayer perceptron with selected architecture and other default parameter values

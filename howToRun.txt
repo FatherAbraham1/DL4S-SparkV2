@@ -13,6 +13,10 @@ SparkSVMDriver /Volumes/MACPASSPORT/joojay/MalwareData/ Mal.csv Ben.csv false
 /Users/joojayhuyn/IdeaProjects/DL4S-SparkV2/target/scala-2.10/dl4s-sparkv2_2.10-1.0.jar \
 SparkLogRegDriver /Volumes/MACPASSPORT/joojay/MalwareData/ Mal.csv Ben.csv false
 
+/Applications/spark-1.6.0-bin-hadoop2.6/bin/spark-submit --class MBartlingSparkML.MLPDriver \
+/Users/joojayhuyn/IdeaProjects/DL4S-SparkV2/target/scala-2.10/dl4s-sparkv2_2.10-1.0.jar \
+SparkMLPDriver /Volumes/MACPASSPORT/joojay/MalwareData/ Mal.csv Ben.csv false
+
 On AWS Spark EC2 Cluster with HDFS:
 /root/spark/bin/spark-submit --class MBartlingSparkML.SVMDriver /home/ec2-user/dl4s-sparkv2_2.10-1.0.jar \
 AWSSparkSVMDriver /user/joojayhuyn/ Mal.csv Ben.csv true ec2-52-37-166-25.us-west-2.compute.amazonaws.com
