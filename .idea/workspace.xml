@@ -2,38 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3bb98ca8-26fb-4c94-812c-ed29ca849509" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SampleLogs/AWSSparkMLPDriverLearningCurvePoints.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/MBartlingSparkML/MLPDriver$$anonfun$3.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/MBartlingSparkML/MLPDriver$$anonfun$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/MBartlingSparkML/MLPDriver$$anonfun$main$1$$anonfun$apply$mcVI$sp$1$$anonfun$1.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/MBartlingSparkML/MLPDriver$$anonfun$main$1$$anonfun$apply$mcVI$sp$1$$anonfun$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/MBartlingSparkML/MLPDriver$$anonfun$main$1$$anonfun$apply$mcVI$sp$1$$anonfun$2.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/MBartlingSparkML/MLPDriver$$anonfun$main$1$$anonfun$apply$mcVI$sp$1$$anonfun$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/MBartlingSparkML/MLPDriver$$anonfun$main$1$$anonfun$apply$mcVI$sp$1.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/MBartlingSparkML/MLPDriver$$anonfun$main$1$$anonfun$apply$mcVI$sp$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/MBartlingSparkML/MLPDriver$$anonfun$main$1.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/MBartlingSparkML/MLPDriver$$anonfun$main$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/classes/MBartlingSparkML/MLPDriver$.class" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/MBartlingSparkML/MLPDriver$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/dl4s-sparkv2_2.10-1.0.jar" afterPath="$PROJECT_DIR$/target/scala-2.10/dl4s-sparkv2_2.10-1.0.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.10/output_dsp" afterPath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.10/output_dsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.10/output" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.10/output" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/packageBin/$global/streams/inputs" afterPath="$PROJECT_DIR$/target/streams/compile/packageBin/$global/streams/inputs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/howToRun.txt" afterPath="$PROJECT_DIR$/howToRun.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/MBartlingSparkML/MLPDriver.scala" afterPath="$PROJECT_DIR$/src/main/scala/MBartlingSparkML/MLPDriver.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/default/dl4s-sparkv2_2.10/1.0/resolved.xml.properties" afterPath="$PROJECT_DIR$/target/resolution-cache/default/dl4s-sparkv2_2.10/1.0/resolved.xml.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/default/dl4s-sparkv2_2.10/1.0/resolved.xml.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/default/dl4s-sparkv2_2.10/1.0/resolved.xml.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-dl4s-sparkv2_2.10-compile-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-dl4s-sparkv2_2.10-compile-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-dl4s-sparkv2_2.10-compile.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-dl4s-sparkv2_2.10-compile.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-dl4s-sparkv2_2.10-docs.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-dl4s-sparkv2_2.10-docs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-dl4s-sparkv2_2.10-optional.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-dl4s-sparkv2_2.10-optional.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-dl4s-sparkv2_2.10-plugin.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-dl4s-sparkv2_2.10-plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-dl4s-sparkv2_2.10-pom.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-dl4s-sparkv2_2.10-pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-dl4s-sparkv2_2.10-provided.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-dl4s-sparkv2_2.10-provided.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-dl4s-sparkv2_2.10-runtime-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-dl4s-sparkv2_2.10-runtime-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-dl4s-sparkv2_2.10-runtime.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-dl4s-sparkv2_2.10-runtime.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-dl4s-sparkv2_2.10-scala-tool.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-dl4s-sparkv2_2.10-scala-tool.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-dl4s-sparkv2_2.10-sources.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-dl4s-sparkv2_2.10-sources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-dl4s-sparkv2_2.10-test-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-dl4s-sparkv2_2.10-test-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-dl4s-sparkv2_2.10-test.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-dl4s-sparkv2_2.10-test.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.10" afterPath="$PROJECT_DIR$/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.10" />
     </list>
     <ignored path="DL4S-SparkV2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -93,8 +62,8 @@
       <file leaf-file-name="MLPDriver.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/MBartlingSparkML/MLPDriver.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3225">
-              <caret line="215" column="4" selection-start-line="215" selection-start-column="4" selection-end-line="215" selection-end-column="4" />
+            <state relative-caret-position="664">
+              <caret line="242" column="31" selection-start-line="242" selection-start-column="31" selection-end-line="242" selection-end-column="31" />
               <folding>
                 <element signature="e#59#92#0" expanded="true" />
               </folding>
@@ -959,8 +928,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/MBartlingSparkML/MLPDriver.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3225">
-          <caret line="215" column="4" selection-start-line="215" selection-start-column="4" selection-end-line="215" selection-end-column="4" />
+        <state relative-caret-position="664">
+          <caret line="242" column="31" selection-start-line="242" selection-start-column="31" selection-end-line="242" selection-end-column="31" />
           <folding>
             <element signature="e#59#92#0" expanded="true" />
           </folding>

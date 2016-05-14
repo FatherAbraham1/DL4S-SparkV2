@@ -213,7 +213,7 @@ object MLPDriver {
         bestLayers = layers
       }
     }
-    
+
     println("Selected MLP's architecture: " + bestLayers.mkString(","))
 
     // Configuring multilayer perceptron with selected architecture and other default parameter values
